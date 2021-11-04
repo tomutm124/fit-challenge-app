@@ -1,0 +1,64 @@
+{
+    "rules": {
+      "users": {
+        "$uid": {
+          ".read": "auth != null && auth.uid == $uid",
+          ".write": "auth != null && auth.uid == $uid",
+          "currentChallenge": {
+            ".read": "auth != null"
+          },
+          "active": {
+            ".read": "auth != null"
+          },
+          "challengeInvites": {
+            "$cid": {
+              ".write": "auth != null && !data.exists()"
+            }
+          }
+        }
+      },
+      "challenges": {
+        "$cid": {
+          ".read": "auth != null 
+          && (data.child('host').val() == auth.uid 
+              || data.child('guest').val() == auth.uid)",
+          ".write": "auth != null 
+          && (!data.exists() 
+              || data.child('host').val() == auth.uid 
+              || data.child('guest').val() == auth.uid)"
+        }
+      },
+      "challengeDetails": {
+        "$cid": {
+          ".read": "auth != null 
+                  && (auth.uid == root.child('challenges').child($cid).child('host').val()
+                      || auth.uid == root.child('challenges').child($cid).child('guest').val())",
+          "$day": {
+            "$uid": {
+              "steps": {
+                ".write": "auth != null && auth.uid == $uid"
+              },
+              "$item": {
+                "opponentScore": {
+                  ".write": "auth != null 
+                      && (auth.uid == root.child('challenges').child($cid).child('host').val()
+                              || auth.uid == root.child('challenges').child($cid).child('guest').val())
+                      && auth.uid != $uid"
+                },
+                "$itemField": {
+                  ".write": "auth != null && auth.uid == $uid"
+                }
+              }
+              }
+          }
+        }
+      },
+      "challengeSummaries": {
+        "$cid": {
+          ".read": "auth != null 
+                  && (auth.uid == root.child('challenges').child($cid).child('host').val()
+                      || auth.uid == root.child('challenges').child($cid).child('guest').val())"
+        }
+      }
+    }
+  }
