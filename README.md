@@ -15,7 +15,7 @@ A mobile application to gamify healthy lifestyle in the form of challenges betwe
 
 ## Highlights
 - Score calculation is customizable
-  - A participant can get an advantage by having their scores scaled up by a factor (e.g. 1.1)
+  - A participant can get an advantage by having their scores scaled up by a factor (e.g. x1.1)
     - This levels the playing field for users with less healthy lifestyles so that they can gradually catch up with friends
     - **This is the key motivation behind building this app** for my friend and myself since I can't find similar features in existing challenge apps
   - Importance of each meal is determined by its max score
