@@ -5,7 +5,7 @@ A mobile application to gamify healthy lifestyle in the form of challenges betwe
 
 ## How it works
 - Each challenge is one-on-one and lasts several days
-- Every day, the participants record what they ate, what exercise they did, and how many steps they walked during the day
+- Every day, the participants record what they ate, what exercise they did, and how many steps they walked
 - Each item is scored based on how healthy it is
   - For each meal and exercise, the user can upload a photo and a text description, 
   then both participants give a score to the item and the average score becomes the item's final score
