@@ -53,7 +53,7 @@ A mobile application to gamify healthy lifestyle in the form of challenges betwe
   - Client sets up listeners to synchronize and respond to updates in real time (e.g. update scores after a friend records a meal)
 - Cloud Functions are triggered by data change on certain database locations (on the JSON tree)
   - e.g. calculate total scores and save in summary after a user records a meal, archive a challenge after both participants quit, etc.
-- A Cloud Function pushes notifications to users after their friend recorded a meal so that the user can give a score
+- A Cloud Function pushes notifications to users after their friend records a meal so that the user can give a score
 
 ## Notes
 - Currently deployed on Expo Go and used by a friend and myself
