@@ -1,7 +1,7 @@
 # fit-challenge-app
 A mobile application to gamify healthy lifestyle in the form of challenges between friends.
 - Compete to stay healthy
-- Supports customizations to help users with less healthy lifestyle to catch up gradually
+- The app supports customizations to help users with less healthy lifestyle to catch up gradually
 
 ## How it works
 - Each challenge is one-on-one and lasts several days
